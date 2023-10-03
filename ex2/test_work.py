@@ -1,5 +1,7 @@
 from work import calc_account
 
+
+
 def test_calc_account():
     """タクシーの運賃計算
     タクシーの運賃を計算するコードを作成せよ
@@ -10,7 +12,6 @@ def test_calc_account():
     * 1mでも超えれば80円単位でかかるものとする
     * 0mおよびマイナスの場合はNoneを返す
     """
-    # 初乗りの距離までは定額610円
     min = 610 # 初乗り運賃
     assert calc_account(1000) == min
     assert calc_account(1700) == min
@@ -19,5 +20,7 @@ def test_calc_account():
     assert calc_account(2016) == 770
     assert calc_account(0) == None
     assert calc_account(-10) == None
+    # 初乗りの距離までは定額610円
+
 
 

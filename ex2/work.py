@@ -2,7 +2,16 @@ from math import ceil
 
 def calc_account(m):
     # 実装は入れていません、自分で入れてください
-    pass
+    d = 1700
+    cnt = 0
+    if m <= 0:
+        return None
+    while True:
+        if m <= d:
+            return 610 + (80 * cnt)
+        else:
+            cnt += 1
+            d += 315
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
